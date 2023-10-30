@@ -93,6 +93,7 @@ def logout():
 
 
 @app.route("/delete/<int:post_id>", methods=["GET"])
+@login_required
 def delete_entry(post_id):
     """Deletes post from database."""
     result = {"status": 0, "message": "Error"}
